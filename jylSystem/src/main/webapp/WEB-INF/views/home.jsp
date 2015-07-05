@@ -9,7 +9,12 @@
 	Hello world!  
 </h1>
 
-<P>  The time on the server is ${serverTime}. 정우가 수정한 작업. ssssfasfsafasfdsafsdfasdfasfasasdfasdfas</P>
-윤성우 ㄱ테스트
+<P>  The time on the server is ${serverTime}. 컨플릭트난거 수정완료 윤성욱</P>
+<h1>컨플릭트 해결 방법.. </h1>
+1) 컨플릭트난 파일 오픈
+2) 수정완료한 후.
+3) add index (add index를 해야 커밋 가능해짐.) 
+4) commit
+5) push 
 </body>
 </html>
