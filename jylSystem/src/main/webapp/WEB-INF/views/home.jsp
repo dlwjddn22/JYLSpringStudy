@@ -16,5 +16,9 @@
 3) add index (add index를 해야 커밋 가능해짐.) 
 4) commit
 5) push 
+
+확인해봐야될 사항.. 
+
+커밋+푸시 전 fetch를 안하면 어떻게 될것인가..
 </body>
 </html>
