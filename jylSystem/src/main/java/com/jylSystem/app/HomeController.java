@@ -36,4 +36,23 @@ public class HomeController {
 		return "home";
 	}
 	
+	/**
+	 * 정우가 파일 생성
+	 */
+	@RequestMapping(value = "/jungAddTest", method = RequestMethod.GET)
+	public String jungAddTest(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+
+		int i = 0;
+		
+		while(i < 9)
+		{
+			i++;
+		}
+		
+		model.addAttribute("totCnt", i );
+		
+		return "jungAddTest";
+	}
+	
 }
