@@ -1,9 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" scope="request" />
 <html>
 <head>
 	<title>Home</title>
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("p").text("123");
+	})
+	</script>
 </head>
 <body>
 <h1>
