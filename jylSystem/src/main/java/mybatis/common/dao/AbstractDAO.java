@@ -1,4 +1,4 @@
-package common.dao;
+package mybatis.common.dao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package sample.controller;
+package mybatis.sample.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import sample.service.SampleService;
+import mybatis.sample.service.SampleService;
  
 @Controller
 public class SampleController {
@@ -20,7 +20,7 @@ public class SampleController {
      
     @Resource(name="sampleService")
     private SampleService sampleService;
-     
+
     @RequestMapping(value="/sample/openSampleBoardList.do")
     public ModelAndView openSampleBoardList(Map<String, Object> commandMap) throws Exception{
         ModelAndView mv = new ModelAndView("/sample/boardList");
