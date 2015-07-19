@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>first</title>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<script src="/js/jquery-1.11.3.js" type="text/javascript"></script>
 <script language="javascript">
 
 	$(document).ready(function(){
@@ -15,7 +13,7 @@
 </head>
 <body>
 <h2>게시판 목록</h2>
-<table style="border:1px solid #ccc">
+<table style="border:1px solid #ccc" >
     <colgroup>
         <col width="10%"/>
         <col width="*"/>
@@ -24,9 +22,10 @@
     </colgroup>
     <thead>
         <tr>
-            <th scope="col">COUNTRY_ID</th>
-            <th scope="col">COUNTRY_NAME</th>
-            <th scope="col">REGION_ID</th>
+            <th scope="col">회원ID</th>
+            <th scope="col">회원명</th>
+            <th scope="col">영문명</th>
+            <th scope="col">비밀번호</th>
         </tr>
     </thead>
     <tbody>
@@ -34,9 +33,10 @@
             <c:when test="${fn:length(list) > 0}">
                 <c:forEach items="${list }" var="row">
                     <tr>
-                        <td>${row.COUNTRY_ID }</td>
-                        <td>${row.COUNTRY_NAME }</td>
-                        <td>${row.REGION_ID }</td>
+                        <td>${row.USR_ID }</td>
+                        <td>${row.USR_NM }</td>
+                        <td>${row.USR_ENG_NM }</td>
+                        <td>${row.PWD }</td>
                     </tr>
                 </c:forEach>
             </c:when>
