@@ -33,7 +33,8 @@
             <c:when test="${fn:length(list) > 0}">
                 <c:forEach items="${list }" var="row">
                     <tr>
-                        <td>${row.USR_ID }</td>
+                        <td><x:if></x:if> ${row.USR_ID }
+                        </td>
                         <td>${row.USR_NM }</td>
                         <td>${row.USR_ENG_NM }</td>
                         <td>${row.PWD }</td>
