@@ -10,6 +10,7 @@
 			     , USR_ENG_NM
 			     , PWD
 			  from MEMBER
+			 where USR_ID = #{useId}
         ]]>
     </select>
      

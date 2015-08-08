@@ -23,8 +23,7 @@ public class SQLServiceImpl implements SQLService{
     private ServiceDAO ServiceDAO;
      
     @Override
-    public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception {
-        return ServiceDAO.selectBoardList(map);
-    }
- 
+    public List<Map<String, Object>> selectBoardList(int useId) throws Exception {
+        return ServiceDAO.selectBoardList(useId);
+    } 
 }

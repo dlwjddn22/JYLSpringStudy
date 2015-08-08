@@ -11,8 +11,6 @@
    	 	<welcome-file>index.htm</welcome-file>
   	</welcome-file-list>-->
 
-
-	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -37,11 +35,15 @@
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
-	
+    
+
 	<!-- mybatis 설정 -->
 	<context-param>
    		<param-name>contextConfigLocation</param-name>
-	    <param-value>classpath*:mybatis/config/context-*.xml</param-value>
+	    <param-value>
+	    	classpath*:mybatis/config/context-*.xml
+	    	/WEB-INF/config/spring-security.xml
+	    </param-value>
 	</context-param>
 	
 	
@@ -61,4 +63,16 @@
 		<url-pattern>*.do</url-pattern>
 	</filter-mapping>
 
+	
+	<!-- spring security-->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

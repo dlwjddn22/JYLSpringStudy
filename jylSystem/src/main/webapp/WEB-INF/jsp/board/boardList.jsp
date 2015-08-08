@@ -7,7 +7,7 @@
 <script language="javascript">
 
 	$(document).ready(function(){
-		$("h2").text("jqeury에 의해 변경되었다");
+		$("h2").text("${name}님이 로그인하였습니다.");
 	});
 </script>
 </head>
