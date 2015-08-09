@@ -3,14 +3,13 @@
  
 <mapper namespace="board">
      
-    <select id="selectBoardList" parameterType="hashmap" resultType="hashmap">
+    <select id="selectBoardList" resultType="hashmap">
         <![CDATA[
             select USR_ID
 			     , USR_NM
 			     , USR_ENG_NM
 			     , PWD
 			  from MEMBER
-			 where USR_ID = #{useId}
         ]]>
     </select>
      

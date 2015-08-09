@@ -2,7 +2,7 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
+	
 
 	<!-- 최초접속시
 	<welcome-file-list>
@@ -15,6 +15,15 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	<!-- mybatis 설정 -->
+	<context-param>
+   		<param-name>contextConfigLocation</param-name>
+	    <param-value>
+	    	classpath*:mybatis/config/context-*.xml
+	    	/WEB-INF/config/spring-security.xml
+	    </param-value>
+	</context-param>	
 	
 	<servlet>
 	    <servlet-name>H2Console</servlet-name>
@@ -56,18 +65,6 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
     
-    
-    
-
-	<!-- mybatis 설정 -->
-	<context-param>
-   		<param-name>contextConfigLocation</param-name>
-	    <param-value>
-	    	classpath*:mybatis/config/context-*.xml
-	    	/WEB-INF/config/spring-security.xml
-	    </param-value>
-	</context-param>
-	
 	
 	<!-- utf-8 defual 설정 -->
 	<filter>

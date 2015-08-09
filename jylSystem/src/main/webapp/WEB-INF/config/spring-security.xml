@@ -13,17 +13,10 @@
     </security:http>    
     
    <security:authentication-manager >    	    	
-    	<security:authentication-provider user-service-ref="LoginService" />    	    	
+    	<security:authentication-provider user-service-ref="loginService" />    	    	
     </security:authentication-manager>
     
-      <bean id="LoginService" class="jylSystem.mybatis.service.LoginService">
-<!--    		 <property name="ServiceDAO"> -->
-<!-- 			<bean  class="jylSystem.mybatis.dao.ServiceDAO"> -->
-<!-- 				<property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
-<!-- 			</bean> -->
-<!-- 		</property> -->
-      </bean>
-      
+    <bean id="loginService" class="jylSystem.mybatis.service.LoginService"/>
 </beans>
 
 

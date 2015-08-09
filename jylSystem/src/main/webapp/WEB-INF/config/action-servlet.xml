@@ -37,6 +37,5 @@
         </beans:property>
     </beans:bean>
 	    
-	<context:component-scan base-package="jylSystem" />
-		
+	<context:component-scan base-package="jylSystem.common.controller" />
 </beans:beans>

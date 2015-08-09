@@ -4,22 +4,17 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
-
-import jylSystem.mybatis.dao.AbstractDAO;
  
-@Repository("ServiceDAO")
+@Repository
 public class ServiceDAO extends AbstractDAO {
  
     @SuppressWarnings("unchecked")
-    public List<Map<String, Object>> selectBoardList(int useId) throws Exception{
+    public List<Map<String, Object>> selectBoardList(int useId) {
         return (List<Map<String, Object>>)selectList("board.selectBoardList", useId);
     }
     
-    @SuppressWarnings("unchecked")
-    public String selectUserPassWord(String userId) throws Exception{
+    public String selectUserPassWord(String userId) {
     	return (String)selectOne("login.selectUserPassWord",userId);
-//        return (String)selectOne("login.selectUserPassWord", userId);
     }
  
 }
