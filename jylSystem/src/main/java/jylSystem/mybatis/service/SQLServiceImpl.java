@@ -17,7 +17,7 @@ public class SQLServiceImpl implements SQLService{
     private ServiceDAO serviceDAO;
      
     @Override
-    public List<Map<String, Object>> selectBoardList(int useId) throws Exception {
+    public List<Map<String, Object>> selectBoardList(int useId) {
         return serviceDAO.selectBoardList(useId);
     } 
 }

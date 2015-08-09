@@ -20,8 +20,8 @@ public class BoardController {
     @Autowired
     private SQLService sqlService;
 
-    @RequestMapping(value="/board/BoardList.do")
-    public ModelAndView BoardList(@RequestParam int useId, Principal principal) throws Exception{//Map<String, Object> paramMa
+    @RequestMapping(value="/board/BoardList")
+    public ModelAndView BoardList(@RequestParam int useId, Principal principal) {//Map<String, Object> paramMa
         ModelAndView mv = new ModelAndView("board/boardList.tiles");
         
         //System.out.println("useId:"+paramMap.get("useId"));

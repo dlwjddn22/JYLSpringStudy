@@ -5,6 +5,6 @@ import java.util.Map;
 
 public interface SQLService {
 
-	List<Map<String, Object>> selectBoardList(int useId) throws Exception;
+	List<Map<String, Object>> selectBoardList(int useId);
 
 }
