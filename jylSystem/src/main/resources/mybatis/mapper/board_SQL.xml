@@ -12,5 +12,11 @@
 			  from MEMBER
         ]]>
     </select>
+    <select id="getBoardCount" resultType="int">
+        <![CDATA[
+            select count(*) as cnt 
+			  from MEMBER
+        ]]>
+    </select>
      
 </mapper>

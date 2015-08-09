@@ -11,7 +11,8 @@ import jylSystem.mybatis.dao.ServiceDAO;
  
 @Service
 public class SQLServiceImpl implements SQLService{
-    Logger log = Logger.getLogger(this.getClass());
+    @SuppressWarnings("unused")
+	private final Logger log = Logger.getLogger(this.getClass());
      
     @Autowired
     private ServiceDAO serviceDAO;
@@ -19,5 +20,10 @@ public class SQLServiceImpl implements SQLService{
     @Override
     public List<Map<String, Object>> selectBoardList(int useId) {
         return serviceDAO.selectBoardList(useId);
-    } 
+    }
+
+	@Override
+	public int getBoardCount(int useId) {
+		return serviceDAO.getBoardCount(useId);
+	}
 }

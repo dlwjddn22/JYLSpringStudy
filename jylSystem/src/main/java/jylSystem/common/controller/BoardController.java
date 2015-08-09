@@ -31,7 +31,8 @@ public class BoardController {
         
 		mv.addObject("name", name);
         mv.addObject("list", list);
-         
+        int count = sqlService.getBoardCount(useId);
+        log.info("Board count: " + count);
         return mv;
     }
 }
