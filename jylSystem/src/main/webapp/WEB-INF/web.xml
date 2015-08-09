@@ -16,6 +16,26 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
+	<servlet>
+	    <servlet-name>H2Console</servlet-name>
+	    <servlet-class>org.h2.server.web.WebServlet</servlet-class>
+	    <!--
+	    <init-param>
+	        <param-name>webAllowOthers</param-name>
+	        <param-value></param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>trace</param-name>
+	        <param-value></param-value>
+	    </init-param>
+	    -->
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>H2Console</servlet-name>
+	    <url-pattern>/console/*</url-pattern>
+	</servlet-mapping>	
+	
 	<!-- do로 접근 처리 -->
 	<servlet>
         <servlet-name>action</servlet-name>
@@ -35,6 +55,8 @@
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    
+    
     
 
 	<!-- mybatis 설정 -->
