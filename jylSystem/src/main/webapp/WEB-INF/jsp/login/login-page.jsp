@@ -21,7 +21,7 @@
 </head>
 <body>
 <table>
-<form name="frm" action="j_spring_security_check" method="post">
+<form name="frm" action="login" method="post">
 <tr>
 	<td> 아이디</td>
 	<td> <input type="text" name="j_username"> </td>
