@@ -21,7 +21,7 @@
    		<param-name>contextConfigLocation</param-name>
 	    <param-value>
 	    	classpath*:mybatis/config/context-*.xml
-	    	/WEB-INF/config/spring-security.xml
+	    	classpath:spring/spring-security.xml
 	    </param-value>
 	</context-param>	
 	
@@ -54,7 +54,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                /WEB-INF/config/*-servlet.xml 
+                classpath*:spring/*-servlet.xml 
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -79,7 +79,7 @@
 	</filter>
 	<filter-mapping>
 	    <filter-name>encodingFilter</filter-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</filter-mapping>
 
 	

@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface SQLService {
-	List<Map<String, Object>> selectBoardList(int useId);
+	List<Map<String, Object>> selectBoardList();
 
-	int getBoardCount(int useId); 
+	int getBoardCount(); 
 	
 }

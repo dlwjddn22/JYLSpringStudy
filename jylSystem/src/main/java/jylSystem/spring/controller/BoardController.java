@@ -1,4 +1,4 @@
-package jylSystem.common.controller;
+package jylSystem.spring.controller;
 
 import java.security.Principal;
 import java.util.List;
@@ -20,19 +20,20 @@ public class BoardController {
     @Autowired
     private SQLService sqlService;
 
-    @RequestMapping(value="/board/BoardList")
-    public ModelAndView BoardList(@RequestParam int useId, Principal principal) {//Map<String, Object> paramMa
+    @RequestMapping(value="/board/boardList")
+    public ModelAndView BoardList(Principal principal) {//Map<String, Object> paramMa
         ModelAndView mv = new ModelAndView("board/boardList.tiles");
         
         //System.out.println("useId:"+paramMap.get("useId"));
          
         String name = principal.getName();
-        List<Map<String,Object>> list = sqlService.selectBoardList(useId);
+        List<Map<String,Object>> list = sqlService.selectBoardList();
+        int count = sqlService.getBoardCount();
         
 		mv.addObject("name", name);
         mv.addObject("list", list);
-        int count = sqlService.getBoardCount(useId);
-        log.info("Board count: " + count);
+        mv.addObject("count", count);
+//        log.info("Board count: " + count);
         return mv;
     }
 }

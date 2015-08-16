@@ -20,6 +20,6 @@
     </bean>    
     
 	<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS">
-	    <jdbc:script location="classpath:source.sql" />
+	    <jdbc:script location="classpath:m2db/source.sql" />
 	 </jdbc:initialize-database>
 </beans>

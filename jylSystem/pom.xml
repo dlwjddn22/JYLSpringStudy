@@ -14,7 +14,7 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 		<org.apache.tiles.version>3.0.3</org.apache.tiles.version>
-		
+		<!--tomcat context를 항상 /(root)로 고정 -->
 		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
 	</properties>
 
@@ -31,13 +31,13 @@
 			</snapshots>
 		</repository>
 
+		<!-- oracle jdbc -->
 		<repository>
 			<id>oracle</id>
 			<name>ORACLE JDBC Repository</name>
 			<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
 		</repository>
 	</repositories>
-
 
 	<dependencies>
 		<!-- Spring -->
@@ -174,19 +174,16 @@
 			<artifactId>ojdbc14</artifactId>
 			<version>10.2.0.4.0</version>
 		</dependency>
-		
+
+		<!-- 가상 oracle(톰캣이 활성화 될때마다 메모리에 db가 탑재) -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.187</version>
 		</dependency>
 
-		<!-- tiles3를 위한 spring api받 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>3.2.0.RELEASE</version>
-		</dependency>
+		<!-- tiles3를 위한 spring api받 <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-webmvc</artifactId> <version>3.2.0.RELEASE</version> </dependency> -->
 
 		<!-- tiles -->
 		<dependency>
@@ -212,9 +209,8 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
-
-
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>

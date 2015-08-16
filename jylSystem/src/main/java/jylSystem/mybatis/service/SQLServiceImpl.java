@@ -18,12 +18,12 @@ public class SQLServiceImpl implements SQLService{
     private ServiceDAO serviceDAO;
      
     @Override
-    public List<Map<String, Object>> selectBoardList(int useId) {
-        return serviceDAO.selectBoardList(useId);
+    public List<Map<String, Object>> selectBoardList() {
+        return serviceDAO.selectBoardList();
     }
 
 	@Override
-	public int getBoardCount(int useId) {
-		return serviceDAO.getBoardCount(useId);
+	public int getBoardCount() {
+		return serviceDAO.getBoardCount();
 	}
 }

@@ -13,6 +13,7 @@
 </head>
 <body>
 <h2>게시판 목록</h2>
+<p>현재 총 ${count} 건이 존재 합니다.
 <table style="border:1px solid #ccc" >
     <colgroup>
         <col width="10%"/>

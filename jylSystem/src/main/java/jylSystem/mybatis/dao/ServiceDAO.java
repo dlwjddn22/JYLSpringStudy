@@ -9,16 +9,16 @@ import org.springframework.stereotype.Repository;
 public class ServiceDAO extends AbstractDAO {
  
     @SuppressWarnings("unchecked")
-    public List<Map<String, Object>> selectBoardList(int useId) {
-        return (List<Map<String, Object>>) selectList("board.selectBoardList", useId);
+    public List<Map<String, Object>> selectBoardList() {
+        return (List<Map<String, Object>>) selectList("board.selectBoardList");
     }
     
     public String selectUserPassWord(String userId) {
     	return (String) selectOne("login.selectUserPassWord",userId);
     }
 
-	public int getBoardCount(int useId) {
-		return (Integer) selectOne("board.getBoardCount",useId);
+	public int getBoardCount() {
+		return (Integer) selectOne("board.getBoardCount");
 	}
  
 }

@@ -12,7 +12,7 @@
 	<!-- Enables the Spring MVC @Controller programming model--> 
 	<annotation-driven />
 	
-	<default-servlet-handler/>
+	<!-- <default-servlet-handler/> -->
 	
 	<view-controller path="/login-fail" view-name="login/login-fail"/>
 	<view-controller path="/login-page" view-name="login/login-page"/>
@@ -37,10 +37,10 @@
     <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
         <beans:property name="definitions">
             <beans:list>
-                 <beans:value>/WEB-INF/tiles/tiles-layout.xml</beans:value>
+                 <beans:value>classpath:tiles/tiles-layout.xml</beans:value><!-- /WEB-INF/tiles/tiles-layout.xml -->
             </beans:list>
         </beans:property>
     </beans:bean>
 	    
-	<context:component-scan base-package="jylSystem.common.controller" />
+	<context:component-scan base-package="jylSystem.spring.controller" />
 </beans:beans>
