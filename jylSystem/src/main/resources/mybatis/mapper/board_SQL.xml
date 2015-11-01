@@ -18,5 +18,36 @@
 			  from MEMBER
         ]]>
     </select>
-     
+     <select id="boardModify" resultType="jylSystem.bean.BoardBean">
+        <![CDATA[
+            SELECT USR_ID
+                 , USR_NM
+                 , PWD
+              FROM MEMBER
+             WHERE USR_ID = #{usr_id}
+        ]]>
+    </select>
+    <select id="boardInsert">
+        <![CDATA[
+            INSERT INTO MEMBER
+            (USR_ID, USR_NM, PWD)
+            VALUES
+            (#{usr_id}, #{usr_nm}, #{pwd})
+        ]]>
+    </select>
+    <select id="boardUpdate">
+        <![CDATA[
+            UPDATE MEMBER
+               SET USR_NM = #{usr_nm}
+                 , PWD    = #{pwd}
+             WHERE USR_ID = #{usr_id}
+        ]]>
+    </select>
+    <select id="boardDelete">
+        <![CDATA[
+            DELETE FROM MEMBER
+             WHERE USR_ID = #{usr_id}
+        ]]>
+    </select>
+    
 </mapper>
