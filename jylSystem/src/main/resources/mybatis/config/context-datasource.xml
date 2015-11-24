@@ -11,7 +11,8 @@
         <property name="username" value="jylStudy"/>
         <property name="password" value="jylStudy"/>
     </bean> -->
-    
+
+    <!-- 관리자 : http://localhost:8080/console -->
   	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <property name="driverClass" value="org.h2.Driver"/>
         <property name="url" value="jdbc:h2:mem:test;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"/>
@@ -20,6 +21,6 @@
     </bean>    
     
 	<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS">
-	    <jdbc:script location="classpath:m2db/source.sql" />
+	    <jdbc:script location="classpath:m2db/source.sql" encoding="UTF-8" /><!-- encoding 프로퍼티 추가로 톰캣 최초 실행시 insert 부분 한글깨짐 해결  -->
 	 </jdbc:initialize-database>
 </beans>

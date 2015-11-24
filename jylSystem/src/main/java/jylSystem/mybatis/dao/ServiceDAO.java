@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import jylSystem.bean.BoardBean;
+import jylSystem.bean.MenuItem;
 
 import org.springframework.stereotype.Repository;
  
@@ -23,7 +24,6 @@ public class ServiceDAO extends AbstractDAO {
 		return (Integer) selectOne("board.getBoardCount");
 	}
 	
-	@SuppressWarnings("unchecked")
 	public BoardBean getBoardModify(String usr_id) {
 		return (BoardBean) selectOne("board.boardModify", usr_id);
 	}
@@ -38,6 +38,11 @@ public class ServiceDAO extends AbstractDAO {
 
 	public void boardDelete(String usr_id) {
 		delete("board.boardDelete", usr_id);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<MenuItem> selectMenuList() {
+		return (List<MenuItem>) selectList("menu.selectMenuList");
 	}
  
 }

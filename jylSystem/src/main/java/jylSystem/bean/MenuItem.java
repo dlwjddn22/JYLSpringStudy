@@ -5,6 +5,8 @@ public class MenuItem {
 	private String menuUrl;
 	
 	public MenuItem(String string, String string2) {
+		setMenuNm(string);
+		setMenuUrl(string2);
 		// TODO Auto-generated constructor stub
 	}
 	public String getMenuNm() {

@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jylSystem.bean.BoardBean;
+import jylSystem.bean.MenuItem;
 import jylSystem.mybatis.dao.ServiceDAO;
  
 @Service
 public class SQLServiceImpl implements SQLService{
-    @SuppressWarnings("unused")
 	private final Logger log = Logger.getLogger(this.getClass());
      
     @Autowired
@@ -46,5 +46,10 @@ public class SQLServiceImpl implements SQLService{
 	@Override
 	public void boardDelete(String usr_id) {
 		serviceDAO.boardDelete(usr_id);
+	}
+
+	@Override
+	public List<MenuItem> selectMenuList() {
+		return serviceDAO.selectMenuList();
 	}
 }

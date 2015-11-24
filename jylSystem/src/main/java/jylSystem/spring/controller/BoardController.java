@@ -32,7 +32,7 @@ public class BoardController {
         int count = sqlService.getBoardCount();
         
 		mv.addObject("name", name);
-		mv.addObject("count", count);
+		mv.addObject("count", count);	
 		mv.addObject("list", list);
         
         return mv;

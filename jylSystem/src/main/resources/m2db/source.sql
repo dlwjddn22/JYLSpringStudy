@@ -1,9 +1,9 @@
 /* 프로그램 메뉴 */
 CREATE TABLE menu (
 	Menu_Cd VARCHAR2(15) NOT NULL, /* 메뉴id */
-	Menu_Nm CHAR(1), /* 메뉴이름 */
+	Menu_Nm VARCHAR2(100), /* 메뉴이름 */
 	Upper_Menu_Cd VARCHAR2(30), /* 상위메뉴ID */
-	Program_Id CHAR(7), /* 프로그램ID */
+	Program_Id VARCHAR2(100), /* 프로그램ID */
 	Image_Nm VARCHAR2(60), /* 이미지name */
 	Use_Sec CHAR(1), /* 사용유무 */
 	Display_No CHAR(2), /* 메뉴순서 */
@@ -126,3 +126,9 @@ ALTER TABLE member
 insert into member ( usr_id, usr_nm, pwd ) values ( 'dlwjddn22', '이정우', '1234');
 insert into member ( usr_id, usr_nm, pwd ) values ( 'abcd', '이정우1', '1234');
 insert into member ( usr_id, usr_nm, pwd ) values ( 'efgh', '이정우2', '1234');
+insert into member ( usr_id, usr_nm, pwd ) values ( 'efgh1', '이정우3', '1234');
+
+
+insert into menu ( menu_cd, menu_nm, program_id ) values ( '1', 'Home', '/board/boardList');
+insert into menu ( menu_cd, menu_nm, program_id ) values ( '2', 'menu1', '/board/boardList');
+insert into menu ( menu_cd, menu_nm, program_id ) values ( '3', 'menu2', '/board/boardList');

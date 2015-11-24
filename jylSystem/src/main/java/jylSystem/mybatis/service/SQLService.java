@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import jylSystem.bean.BoardBean;
-import jylSystem.spring.controller.BoardController;
+import jylSystem.bean.MenuItem;
 
 public interface SQLService {
 	List<Map<String, Object>> selectBoardList();
@@ -13,4 +13,5 @@ public interface SQLService {
 	void boardInsert(BoardBean boardBean);
 	void boardUpdate(BoardBean boardBean);
 	void boardDelete(String usr_id);
+	List<MenuItem> selectMenuList();
 }
