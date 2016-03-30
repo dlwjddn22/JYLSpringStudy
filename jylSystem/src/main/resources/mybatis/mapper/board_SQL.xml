@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="board">
+<mapper namespace="jylSystem.mybatis.dao.BoardDao">
      
     <select id="selectBoardList" resultType="hashmap">
-        <![CDATA[
             select USR_ID
 			     , USR_NM
 			     , USR_ENG_NM
 			     , PWD
 			  from MEMBER
-        ]]>
     </select>
     <select id="getBoardCount" resultType="int">
-        <![CDATA[
             select count(*) as cnt 
 			  from MEMBER
-        ]]>
     </select>
-     <select id="boardModify" resultType="jylSystem.bean.BoardBean">
-        <![CDATA[
+     <select id="boardModify" resultType="jylSystem.vo.BoardBean">
             SELECT USR_ID
                  , USR_NM
                  , PWD
               FROM MEMBER
              WHERE USR_ID = #{usr_id}
-        ]]>
     </select>
-    <select id="boardInsert">
-        <![CDATA[
+    <insert id="boardInsert">
             INSERT INTO MEMBER
             (USR_ID, USR_NM, PWD)
             VALUES
             (#{usr_id}, #{usr_nm}, #{pwd})
-        ]]>
-    </select>
-    <select id="boardUpdate">
-        <![CDATA[
+    </insert>
+    <update id="boardUpdate">
             UPDATE MEMBER
                SET USR_NM = #{usr_nm}
                  , PWD    = #{pwd}
              WHERE USR_ID = #{usr_id}
-        ]]>
-    </select>
-    <select id="boardDelete">
-        <![CDATA[
+    </update>
+    <delete id="boardDelete">
             DELETE FROM MEMBER
              WHERE USR_ID = #{usr_id}
-        ]]>
-    </select>
+    </delete>
     
 </mapper>

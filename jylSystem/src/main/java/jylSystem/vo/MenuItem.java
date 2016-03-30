@@ -1,4 +1,4 @@
-package jylSystem.bean;
+package jylSystem.vo;
 
 public class MenuItem {
 	private String menuNm;

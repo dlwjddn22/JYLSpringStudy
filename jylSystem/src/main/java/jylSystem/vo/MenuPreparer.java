@@ -1,4 +1,4 @@
-package jylSystem.bean;
+package jylSystem.vo;
 
 import java.util.ArrayList;
 import java.util.List;

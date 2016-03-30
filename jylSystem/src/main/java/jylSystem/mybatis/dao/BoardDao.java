@@ -1,12 +1,12 @@
-package jylSystem.mybatis.service;
+package jylSystem.mybatis.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import jylSystem.bean.BoardBean;
-import jylSystem.bean.MenuItem;
+import jylSystem.vo.BoardBean;
+import jylSystem.vo.MenuItem;
 
-public interface SQLService {
+public interface BoardDao {
 	List<Map<String, Object>> selectBoardList();
 	int getBoardCount();
 	BoardBean boardModify(String usr_id);

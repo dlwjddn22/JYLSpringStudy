@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
      
 <!--     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
@@ -11,8 +13,8 @@
         <property name="username" value="jylStudy"/>
         <property name="password" value="jylStudy"/>
     </bean> -->
-
-    <!-- 관리자 : http://localhost:8080/console -->
+	
+	<!-- dataSoure 설정 -->
   	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <property name="driverClass" value="org.h2.Driver"/>
         <property name="url" value="jdbc:h2:mem:test;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"/>
@@ -23,4 +25,18 @@
 	<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS">
 	    <jdbc:script location="classpath:m2db/source.sql" encoding="UTF-8" /><!-- encoding 프로퍼티 추가로 톰캣 최초 실행시 insert 부분 한글깨짐 해결  -->
 	 </jdbc:initialize-database>
+	
+	<!-- mybatis 설정  -->
+	 <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:/mybatis/mapper/*_SQL.xml" /><!-- classpath:/mapper/**/*_SQL.xml -->
+    </bean>
+     
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSession"/>
+    </bean>  
+    
+    <context:component-scan base-package="jylSystem.mybatis.dao,jylSystem.mybatis.service" />
+
+    
 </beans>

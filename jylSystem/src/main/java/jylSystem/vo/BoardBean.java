@@ -1,4 +1,4 @@
-package jylSystem.bean;
+package jylSystem.vo;
 
 public class BoardBean {
 	private String usr_id;
