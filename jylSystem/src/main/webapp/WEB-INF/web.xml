@@ -12,6 +12,13 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
+	<!-- security 중복로그인을 막기위한  리스너 -->
+	<listener>
+	    <listener-class>
+	      org.springframework.security.web.session.HttpSessionEventPublisher
+	    </listener-class>
+	 </listener>
+	
 	<!-- mybatis 설정 -->
 	<context-param>
    		<param-name>contextConfigLocation</param-name>
@@ -81,7 +88,7 @@
 	
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/*</url-pattern><!--*를 제외하면 post방식에서 한글 깨짐현상 발생한다. -->
 	</filter-mapping>
 	
 	<!-- spring security-->
@@ -95,4 +102,9 @@
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- session timeout설정 -->
+	<session-config>
+        <session-timeout>30</session-timeout><!-- 30분 -->
+    </session-config>
 </web-app>

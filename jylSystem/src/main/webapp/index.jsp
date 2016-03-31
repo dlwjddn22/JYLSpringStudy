@@ -28,7 +28,7 @@
 	</script>	
 </head>
 <body style="margin:10px">
-	<form name="frm" class="form-horizontal" action="login" method="post" style="width:500px;">
+	<form name="frm" class="form-horizontal" action="/login" method="post" style="width:500px;">
 	  <div class="form-group" >
 	    <label for="inputEmail3" class="col-sm-2 control-label">Id</label>
 	    <div class="col-sm-10">

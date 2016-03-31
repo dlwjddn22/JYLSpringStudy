@@ -2,6 +2,8 @@ package jylSystem.spring.controller;
 
 import java.security.Principal;
 
+import javax.servlet.http.HttpSession;
+
 import jylSystem.mybatis.dao.BoardDao;
 import jylSystem.vo.BoardBean;
 
@@ -12,9 +14,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+//@SessionAttributes("ccc")//model중에 이름이 같은 객체를 session에 담는다. 
 public class BoardController {
 	Logger log = Logger.getLogger(this.getClass());
 
@@ -30,7 +35,6 @@ public class BoardController {
 		mv.addObject("name", name);
 		mv.addObject("count", boardDao.getBoardCount());
 		mv.addObject("list", boardDao.selectBoardList());
-		
 		return mv;
 	}
 

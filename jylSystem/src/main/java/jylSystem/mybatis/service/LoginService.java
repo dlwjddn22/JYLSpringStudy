@@ -34,7 +34,7 @@ public class LoginService implements UserDetailsService  {
 		Collection<SimpleGrantedAuthority> roles = new ArrayList<SimpleGrantedAuthority>(); 
 		roles.add(new SimpleGrantedAuthority("ROLE_USER"));
 	 
-		//로그인 정보를 리컨한다
+		//로그인 정보를 리턴한다
 		UserDetails user = new User(username, userPwd, roles);
 		return user;
 	}
