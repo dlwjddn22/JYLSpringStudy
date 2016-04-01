@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="jylSystem.mybatis.dao.MenuDao">
+     <resultMap type="jylSystem.vo.MenuItem" id="resultMap">
+		<result column="MENU_NM" property="menuNm" jdbcType="VARCHAR" />
+		<result column="PROGRAM_ID" property="programId" jdbcType="VARCHAR" />
+		<result column="IMAGE_NM" property="imageNm" jdbcType="VARCHAR" />
+	</resultMap>
+    <select id="getMenus" resultMap="resultMap">
+           SELECT MENU_NM
+                , PROGRAM_ID
+                , IMAGE_NM 
+             FROM MENU 
+    </select>
+     
+</mapper>

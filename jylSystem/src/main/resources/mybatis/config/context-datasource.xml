@@ -37,6 +37,4 @@
     </bean>  
     
     <context:component-scan base-package="jylSystem.mybatis.dao,jylSystem.mybatis.service" />
-
-    
 </beans>

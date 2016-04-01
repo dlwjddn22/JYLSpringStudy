@@ -46,11 +46,4 @@ public class BoardService implements BoardDao {
 	public void boardDelete(String usr_id) {
 		sqlSessionTemplate.getMapper(BoardDao.class).boardDelete(usr_id);
 	}
-
-	@Override
-	public List<MenuItem> selectMenuList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

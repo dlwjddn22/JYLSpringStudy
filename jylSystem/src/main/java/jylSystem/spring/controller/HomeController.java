@@ -12,4 +12,10 @@ public class HomeController {
 	{
 		return "login/login-page";
 	}
+	
+	@RequestMapping(value="/layout/front", method = RequestMethod.GET)
+	public String front()
+	{
+		return "layouts/front.tiles";
+	}
 }

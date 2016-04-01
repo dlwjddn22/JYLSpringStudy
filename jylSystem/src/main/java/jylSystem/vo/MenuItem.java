@@ -2,25 +2,25 @@ package jylSystem.vo;
 
 public class MenuItem {
 	private String menuNm;
-	private String menuUrl;
+	private String programId;
+	private String imageNm;
 	
-	public MenuItem(String string, String string2) {
-		setMenuNm(string);
-		setMenuUrl(string2);
-		// TODO Auto-generated constructor stub
-	}
 	public String getMenuNm() {
 		return menuNm;
 	}
 	public void setMenuNm(String menuNm) {
 		this.menuNm = menuNm;
 	}
-	public String getMenuUrl() {
-		return menuUrl;
+	public String getProgramId() {
+		return programId;
 	}
-	public void setMenuUrl(String menuUrl) {
-		this.menuUrl = menuUrl;
+	public void setProgramId(String programId) {
+		this.programId = programId;
 	}
-	
-	
+	public String getImageNm() {
+		return imageNm;
+	}
+	public void setImageNm(String imageNm) {
+		this.imageNm = imageNm;
+	}
 }

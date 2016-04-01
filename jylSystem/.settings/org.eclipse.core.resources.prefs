@@ -1,8 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/java/jylSystem/mybatis/service/LoginService.java=UTF-8
-encoding//src/main/java/jylSystem/vo/MenuPreparer.java=UTF-8
+encoding//src/main/java/jylSystem/mybatis/service/MenuPreparer.java=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/board/boardList.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/board/boardModify.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/jsp/layouts/header.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/jsp/layouts/menu.jsp=UTF-8
 encoding/<project>=UTF-8

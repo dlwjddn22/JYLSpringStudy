@@ -13,5 +13,4 @@ public interface BoardDao {
 	void boardInsert(BoardBean boardBean);
 	void boardUpdate(BoardBean boardBean);
 	void boardDelete(String usr_id);
-	List<MenuItem> selectMenuList();
 }

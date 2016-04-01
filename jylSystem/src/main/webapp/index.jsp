@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <html>
 <head>
-	<script type="text/javascript" src="/js/jquery-1.11.3.js" ></script>
+	<script type="text/javascript" src="/js/jquery.js" ></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script><!-- 부트스트랩js -->
 	<link rel="stylesheet" href="/css/default.css">
 	<link rel="stylesheet" href="/css/bootstrap.min.css"><!-- 부트스트랩css -->

@@ -26,7 +26,6 @@
     	<security:authentication-provider user-service-ref="loginService" />    	    	
     </security:authentication-manager>
     
-    <bean id="loginService" class="jylSystem.mybatis.service.LoginService"/>
 </beans>
 
 

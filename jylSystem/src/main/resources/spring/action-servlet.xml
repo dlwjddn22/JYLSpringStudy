@@ -21,6 +21,8 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/js/**" location="/js/" /> 
 	<resources mapping="/css/**" location="/css/" />
+	<resources mapping="/font/**" location="/font/" />
+	<resources mapping="/font-awesome/**" location="/font-awesome/" />
 	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory --> 
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -40,7 +42,11 @@
                  <beans:value>classpath:tiles/tiles-layout.xml</beans:value>
             </beans:list>
         </beans:property>
+         <beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory"/><!-- ViewPreparer를 사용하기 위한 선언 -->
     </beans:bean>
+    
+     <beans:bean id="menuPreparer" class="jylSystem.mybatis.service.MenuPreparer" autowire="byName"/><!-- menuService를 주입받기 위해 빈으로 등록 -->
 	    
 	<context:component-scan base-package="jylSystem.spring.controller" />
+	
 </beans:beans>

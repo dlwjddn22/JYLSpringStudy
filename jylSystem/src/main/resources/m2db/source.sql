@@ -129,6 +129,7 @@ insert into member ( usr_id, usr_nm, pwd ) values ( 'efgh', '이정우2', '1234'
 insert into member ( usr_id, usr_nm, pwd ) values ( 'efgh1', '이정우3', '1234');
 
 
-insert into menu ( menu_cd, menu_nm, program_id ) values ( '1', 'Home', '/board/boardList');
-insert into menu ( menu_cd, menu_nm, program_id ) values ( '2', 'menu1', '/board/boardList');
-insert into menu ( menu_cd, menu_nm, program_id ) values ( '3', 'menu2', '/board/boardList');
+insert into menu ( menu_cd, menu_nm, program_id, image_nm ) values ( '1', 'Dashboard', '/layout/front', 'fa-dashboard');
+insert into menu ( menu_cd, menu_nm, program_id, image_nm ) values ( '2', '게시판', '/board/boardList', 'fa-bar-chart-o');
+insert into menu ( menu_cd, menu_nm, program_id, image_nm ) values ( '3', 'menu1', '#', 'fa-file');
+insert into menu ( menu_cd, menu_nm, program_id, image_nm ) values ( '4', 'menu2', '#', 'fa-file');
